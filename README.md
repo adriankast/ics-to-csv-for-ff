@@ -1,2 +1,2 @@
-# ics-to-cvs-for-ff
-Convert a ICS calendar file to an CVS file 
+# ics-to-csv-for-ff
+Convert a ICS calendar file to a CSV file 
