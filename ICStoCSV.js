@@ -1,6 +1,10 @@
 "use strict";
 
+var _a;
+const args = process.argv
 const fs = require("fs")
+const inputCal = (_a = args[2], (_a !== null && _a !== void 0 ? _a : "input-example.ics"))
+
 
 // ----- Defines ------
 const possibleStates = {
@@ -41,7 +45,7 @@ const possibleGroup = {
 // ---------------------
 
 // Get file content and generate array of events with it (without "BEGIN:VEVENT", "END:VEVENT" tags)
-const icsCalendar = fs.readFileSync("input-example.ics", {encoding: "utf8"}).replace(/\r/g, "")
+const icsCalendar = fs.readFileSync(inputCal, {encoding: "utf8"}).replace(/\r/g, "")
 const icsLines = [];
 const icsEvents = icsCalendar.split("BEGIN:VEVENT");
 let remLines = icsEvents.shift();
